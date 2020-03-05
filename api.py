@@ -8,6 +8,10 @@ app = Flask(__name__)
 CORS(app)
 inf = Inference()
 
+@app.route('/', methods=['GET'])
+def hello():
+    return "Helloworld!"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == "POST":
