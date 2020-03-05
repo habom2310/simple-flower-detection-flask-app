@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request, jsonify
 from flask_cors import CORS
 from infer import Inference
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -22,4 +23,5 @@ def predict():
                     data = result), 200
 
 if __name__ == '__main__':
-    app.run(threaded=False, debug=False, port=3006)
+    port = int(os.environ.get('PORT', 33507))
+    app.run(threaded=False, debug=False, port=port)
