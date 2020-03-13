@@ -1,12 +1,12 @@
 from flask import Flask
 from flask import request, jsonify
 # from flask_cors import CORS
-# from infer import Inference
+from infer import Inference
 import os
 
 application = Flask(__name__)
 # CORS(application)
-# inf = Inference()
+inf = Inference()
 
 @application.route('/', methods=['GET'])
 def hello():
