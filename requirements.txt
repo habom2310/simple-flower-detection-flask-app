@@ -6,4 +6,4 @@ Keras-Preprocessing==1.1.0
 Pillow==7.0.0
 requests==2.23.0
 tensorflow==2.0.0a0
-urllib3==1.25.8
+urllib3==1.26.5
